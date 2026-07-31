@@ -67,37 +67,60 @@ function AboutPage() {
           </div>
         </Container>
 
-        {/* ============ FOUNDER SECTION (WITH TWO PHOTOS) ============ */}
+        {/* ============ FOUNDER & LEADERSHIP SECTION (ANIMATED DUAL PHOTOS) ============ */}
         <section className="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-white/[0.02] to-transparent border-y border-white/5">
           <Container>
             <div className="grid lg:grid-cols-[1.1fr_1.2fr] gap-16 lg:gap-24 items-center">
               
-              {/* Dual Photo Collage Showcase */}
+              {/* Animated Dual Photo Showcase */}
               <FadeIn className="relative">
-                <div className="relative w-full max-w-[32rem] mx-auto lg:mx-0 grid grid-cols-12 gap-4 items-center">
+                <div className="relative w-full max-w-[34rem] mx-auto lg:mx-0 grid grid-cols-12 gap-4 items-center">
                   
-                  {/* First Main Photo */}
-                  <div className="col-span-8 aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 relative z-10">
-                    <div className="w-full h-full rounded-xl overflow-hidden relative">
-                      <img 
-                        src="/PHOTO-2026-07-30-13-37-44.jpg" 
-                        alt="Bhupendra Karki - Founder" 
-                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-1000 ease-out grayscale-[10%]"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  {/* Photo 1: Amit Singh */}
+                  <div className="col-span-8 flex flex-col gap-4 group">
+                    <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 relative z-10 transition-all duration-700 group-hover:border-accent/60 group-hover:shadow-[0_0_60px_-15px_rgba(197,160,89,0.4)]">
+                      <div className="w-full h-full rounded-xl overflow-hidden relative">
+                        <img 
+                          src="/PHOTO-2026-07-30-13-37-44.jpg" 
+                          alt="Amit Singh" 
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out grayscale-[10%]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <span className="inline-block px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-lg">
+                            Executive Leadership
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Name & Designation */}
+                    <div className="pl-1 transition-transform duration-500 group-hover:translate-x-1">
+                      <h4 className="text-white font-serif text-2xl tracking-wide">Amit Singh</h4>
+                      <p className="text-accent text-xs uppercase tracking-widest font-semibold mt-0.5">Co-Founder & Managing Partner</p>
                     </div>
                   </div>
 
-                  {/* Second Photo (Overlapping Stacked Card) */}
-                  <div className="col-span-6 -ml-12 sm:-ml-16 mt-20 aspect-square overflow-hidden rounded-2xl border-2 border-accent/30 shadow-[0_0_50px_-10px_rgba(197,160,89,0.3)] bg-zinc-900 p-2 relative z-20">
-                    <div className="w-full h-full rounded-xl overflow-hidden relative">
-                      {/* Note: Agar doosri photo ka naam kuch aur hai toh yahan file name change kar sakte hain */}
-                      <img 
-                        src="/PHOTO-2.jpg" 
-                        alt="CSA Prime Realty Team & Office" 
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000 ease-out"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                  {/* Photo 2: Ajeet Singh */}
+                  <div className="col-span-6 -ml-12 sm:-ml-16 mt-20 flex flex-col gap-4 relative z-20 group">
+                    <div className="aspect-square overflow-hidden rounded-2xl border-2 border-accent/30 shadow-[0_0_50px_-10px_rgba(197,160,89,0.3)] bg-zinc-900 p-2 transition-all duration-700 group-hover:border-accent/70 group-hover:shadow-[0_0_70px_-15px_rgba(197,160,89,0.5)]">
+                      <div className="w-full h-full rounded-xl overflow-hidden relative">
+                        <img 
+                          src="/PHOTO-2.jpg" 
+                          alt="Ajeet Singh" 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <span className="inline-block px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-lg">
+                            Operations & Strategy
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Name & Designation Card */}
+                    <div className="pl-1 bg-black/60 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 transition-transform duration-500 group-hover:translate-x-1 shadow-2xl">
+                      <h4 className="text-white font-serif text-lg tracking-wide">Ajeet Singh</h4>
+                      <p className="text-zinc-400 text-[10px] uppercase tracking-widest font-semibold mt-0.5">Director of Strategy & Operations</p>
                     </div>
                   </div>
 
@@ -111,15 +134,15 @@ function AboutPage() {
                     "Real estate in NCR has evolved. It’s no longer just about buying property; it’s about strategic wealth creation and absolute peace of mind."
                   </h2>
                   <p className="text-lg text-zinc-400 font-light leading-relaxed mb-6">
-                    The NCR real estate market is incredibly dynamic, but it can also be overwhelming. I founded CSA Prime Realty with a singular mission: to cut through the market noise and offer a strictly advisory-led approach. No aggressive sales pitches, no hidden clauses—just data-backed insights and strict RERA compliance.
+                    The NCR real estate market is incredibly dynamic, but it can also be overwhelming. We founded CSA Prime Realty with a singular mission: to cut through the market noise and offer a strictly advisory-led approach. No aggressive sales pitches, no hidden clauses—just data-backed insights and strict RERA compliance.
                   </p>
                   <p className="text-lg text-zinc-400 font-light leading-relaxed mb-10">
-                    Whether you are looking for a luxury residence in Noida or a high-yield commercial asset on the Yamuna Expressway, my team and I personally vet every project before it reaches your desk. We don't just facilitate transactions; we fiercely protect your interests.
+                    Whether you are looking for a luxury residence in Noida or a high-yield commercial asset on the Yamuna Expressway, our team personally vets every project before it reaches your desk. We don't just facilitate transactions; we fiercely protect your interests.
                   </p>
                   
                   <div className="flex flex-col">
-                    <p className="text-3xl font-serif text-white tracking-wide mb-1">Bhupendra Karki</p>
-                    <p className="text-accent uppercase tracking-[0.2em] text-[10px] font-bold">Founder & Managing Director</p>
+                    <p className="text-3xl font-serif text-white tracking-wide mb-1">Amit Singh & Ajeet Singh</p>
+                    <p className="text-accent uppercase tracking-[0.2em] text-[10px] font-bold">Leadership Board, CSA Prime Realty</p>
                   </div>
                 </div>
               </SlideUp>
