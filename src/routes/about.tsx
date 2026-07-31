@@ -67,18 +67,18 @@ function AboutPage() {
           </div>
         </Container>
 
-        {/* ============ FOUNDER & LEADERSHIP SECTION (ANIMATED DUAL PHOTOS) ============ */}
+        {/* ============ LEADERSHIP SECTION (AMIT SINGH & AJEET SINGH) ============ */}
         <section className="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-white/[0.02] to-transparent border-y border-white/5">
           <Container>
-            <div className="grid lg:grid-cols-[1.1fr_1.2fr] gap-16 lg:gap-24 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
               
-              {/* Animated Dual Photo Showcase */}
+              {/* Dual Animated Photos Grid */}
               <FadeIn className="relative">
-                <div className="relative w-full max-w-[34rem] mx-auto lg:mx-0 grid grid-cols-12 gap-4 items-center">
+                <div className="grid sm:grid-cols-2 gap-6 items-center">
                   
-                  {/* Photo 1: Amit Singh */}
-                  <div className="col-span-8 flex flex-col gap-4 group">
-                    <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 relative z-10 transition-all duration-700 group-hover:border-accent/60 group-hover:shadow-[0_0_60px_-15px_rgba(197,160,89,0.4)]">
+                  {/* Amit Singh Card */}
+                  <div className="flex flex-col gap-4 group">
+                    <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 transition-all duration-700 group-hover:border-accent/60 group-hover:shadow-[0_0_60px_-15px_rgba(197,160,89,0.4)]">
                       <div className="w-full h-full rounded-xl overflow-hidden relative">
                         <img 
                           src="/PHOTO-2026-07-30-13-37-44.jpg" 
@@ -88,7 +88,7 @@ function AboutPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <span className="inline-block px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-lg">
-                            Executive Leadership
+                            Leadership
                           </span>
                         </div>
                       </div>
@@ -100,9 +100,9 @@ function AboutPage() {
                     </div>
                   </div>
 
-                  {/* Photo 2: Ajeet Singh */}
-                  <div className="col-span-6 -ml-12 sm:-ml-16 mt-20 flex flex-col gap-4 relative z-20 group">
-                    <div className="aspect-square overflow-hidden rounded-2xl border-2 border-accent/30 shadow-[0_0_50px_-10px_rgba(197,160,89,0.3)] bg-zinc-900 p-2 transition-all duration-700 group-hover:border-accent/70 group-hover:shadow-[0_0_70px_-15px_rgba(197,160,89,0.5)]">
+                  {/* Ajeet Singh Card */}
+                  <div className="flex flex-col gap-4 group sm:mt-12">
+                    <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 transition-all duration-700 group-hover:border-accent/60 group-hover:shadow-[0_0_60px_-15px_rgba(197,160,89,0.4)]">
                       <div className="w-full h-full rounded-xl overflow-hidden relative">
                         <img 
                           src="/PHOTO-2.jpg" 
@@ -112,21 +112,22 @@ function AboutPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <span className="inline-block px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-lg">
-                            Operations & Strategy
+                            Operations
                           </span>
                         </div>
                       </div>
                     </div>
-                    {/* Name & Designation Card */}
-                    <div className="pl-1 bg-black/60 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 transition-transform duration-500 group-hover:translate-x-1 shadow-2xl">
-                      <h4 className="text-white font-serif text-lg tracking-wide">Ajeet Singh</h4>
-                      <p className="text-zinc-400 text-[10px] uppercase tracking-widest font-semibold mt-0.5">Director of Strategy & Operations</p>
+                    {/* Name & Designation */}
+                    <div className="pl-1 transition-transform duration-500 group-hover:translate-x-1">
+                      <h4 className="text-white font-serif text-2xl tracking-wide">Ajeet Singh</h4>
+                      <p className="text-accent text-xs uppercase tracking-widest font-semibold mt-0.5">Director of Strategy & Operations</p>
                     </div>
                   </div>
 
                 </div>
               </FadeIn>
 
+              {/* Founder Quote / Description */}
               <SlideUp delay={0.2}>
                 <div className="max-w-2xl">
                   <Quote className="size-10 text-accent/40 mb-6" />
@@ -146,6 +147,7 @@ function AboutPage() {
                   </div>
                 </div>
               </SlideUp>
+
             </div>
           </Container>
         </section>
