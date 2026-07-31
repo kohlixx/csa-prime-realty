@@ -72,55 +72,45 @@ function AboutPage() {
           <Container>
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
               
-              {/* Dual Animated Photos Grid */}
+              {/* Dual Animated Cards Grid */}
               <FadeIn className="relative">
-                <div className="grid sm:grid-cols-2 gap-6 items-center">
+                <div className="grid sm:grid-cols-2 gap-6 items-stretch">
                   
                   {/* Amit Singh Card */}
-                  <div className="flex flex-col gap-4 group">
-                    <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 transition-all duration-700 group-hover:border-accent/60 group-hover:shadow-[0_0_60px_-15px_rgba(197,160,89,0.4)]">
-                      <div className="w-full h-full rounded-xl overflow-hidden relative">
+                  <div className="group bg-zinc-900/80 p-6 rounded-3xl border border-white/10 hover:border-accent/40 transition-all duration-500 shadow-xl flex flex-col justify-between">
+                    <div>
+                      <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 bg-zinc-900 mb-6 relative">
                         <img 
                           src="/PHOTO-2026-07-30-13-37-44.jpg" 
                           alt="Amit Singh" 
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out grayscale-[10%]"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                        <div className="absolute bottom-4 left-4 right-4">
-                          <span className="inline-block px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-lg">
-                            Leadership
-                          </span>
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <span className="absolute bottom-4 left-4 px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full">
+                          Leadership
+                        </span>
                       </div>
-                    </div>
-                    {/* Name & Designation */}
-                    <div className="pl-1 transition-transform duration-500 group-hover:translate-x-1">
-                      <h4 className="text-white font-serif text-2xl tracking-wide">Amit Singh</h4>
-                      <p className="text-accent text-xs uppercase tracking-widest font-semibold mt-0.5">Co-Founder & Managing Partner</p>
+                      <h4 className="text-white font-serif text-2xl font-bold tracking-wide mb-1">Amit Singh</h4>
+                      <p className="text-accent text-xs uppercase tracking-widest font-semibold">Co-Founder & Managing Partner</p>
                     </div>
                   </div>
 
                   {/* Ajeet Singh Card */}
-                  <div className="flex flex-col gap-4 group sm:mt-12">
-                    <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 transition-all duration-700 group-hover:border-accent/60 group-hover:shadow-[0_0_60px_-15px_rgba(197,160,89,0.4)]">
-                      <div className="w-full h-full rounded-xl overflow-hidden relative">
+                  <div className="group bg-zinc-900/80 p-6 rounded-3xl border border-white/10 hover:border-accent/40 transition-all duration-500 shadow-xl flex flex-col justify-between sm:mt-12">
+                    <div>
+                      <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 bg-zinc-900 mb-6 relative">
                         <img 
                           src="/PHOTO-2.jpg" 
                           alt="Ajeet Singh" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                        <div className="absolute bottom-4 left-4 right-4">
-                          <span className="inline-block px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full shadow-lg">
-                            Operations
-                          </span>
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <span className="absolute bottom-4 left-4 px-3 py-1 bg-accent/20 backdrop-blur-md border border-accent/35 text-accent text-[10px] uppercase tracking-widest font-semibold rounded-full">
+                          Operations
+                        </span>
                       </div>
-                    </div>
-                    {/* Name & Designation */}
-                    <div className="pl-1 transition-transform duration-500 group-hover:translate-x-1">
-                      <h4 className="text-white font-serif text-2xl tracking-wide">Ajeet Singh</h4>
-                      <p className="text-accent text-xs uppercase tracking-widest font-semibold mt-0.5">Director of Strategy & Operations</p>
+                      <h4 className="text-white font-serif text-2xl font-bold tracking-wide mb-1">Ajeet Singh</h4>
+                      <p className="text-accent text-xs uppercase tracking-widest font-semibold">Director of Strategy & Operations</p>
                     </div>
                   </div>
 
