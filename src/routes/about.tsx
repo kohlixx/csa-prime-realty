@@ -67,21 +67,40 @@ function AboutPage() {
           </div>
         </Container>
 
-        {/* ============ FOUNDER SECTION ============ */}
+        {/* ============ FOUNDER SECTION (WITH TWO PHOTOS) ============ */}
         <section className="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-white/[0.02] to-transparent border-y border-white/5">
           <Container>
-            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24 items-center">
+            <div className="grid lg:grid-cols-[1.1fr_1.2fr] gap-16 lg:gap-24 items-center">
               
+              {/* Dual Photo Collage Showcase */}
               <FadeIn className="relative">
-                <div className="relative aspect-[4/5] w-full max-w-[24rem] mx-auto lg:mx-0 overflow-hidden rounded-t-[10rem] rounded-b-3xl border border-accent/20 shadow-[0_0_50px_-12px_rgba(197,160,89,0.15)] bg-zinc-900 p-2">
-                  <div className="w-full h-full rounded-t-[10rem] rounded-b-2xl overflow-hidden relative">
-                    <img 
-                      src="/PHOTO-2026-07-30-13-37-44.jpg" 
-                      alt="Bhupendra Karki - Founder" 
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-1000 ease-out grayscale-[20%]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div className="relative w-full max-w-[32rem] mx-auto lg:mx-0 grid grid-cols-12 gap-4 items-center">
+                  
+                  {/* First Main Photo */}
+                  <div className="col-span-8 aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 shadow-[0_0_40px_-10px_rgba(197,160,89,0.2)] bg-zinc-900 p-2 relative z-10">
+                    <div className="w-full h-full rounded-xl overflow-hidden relative">
+                      <img 
+                        src="/PHOTO-2026-07-30-13-37-44.jpg" 
+                        alt="Bhupendra Karki - Founder" 
+                        className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-1000 ease-out grayscale-[10%]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    </div>
                   </div>
+
+                  {/* Second Photo (Overlapping Stacked Card) */}
+                  <div className="col-span-6 -ml-12 sm:-ml-16 mt-20 aspect-square overflow-hidden rounded-2xl border-2 border-accent/30 shadow-[0_0_50px_-10px_rgba(197,160,89,0.3)] bg-zinc-900 p-2 relative z-20">
+                    <div className="w-full h-full rounded-xl overflow-hidden relative">
+                      {/* Note: Agar doosri photo ka naam kuch aur hai toh yahan file name change kar sakte hain */}
+                      <img 
+                        src="/PHOTO-2.jpg" 
+                        alt="CSA Prime Realty Team & Office" 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    </div>
+                  </div>
+
                 </div>
               </FadeIn>
 
@@ -111,33 +130,25 @@ function AboutPage() {
         {/* ============ FOOLPROOF STATS SECTION ============ */}
         <section className="py-20 mb-10">
           <Container>
-            {/* Explicit solid background color and borders so it NEVER blends in */}
             <div className="bg-[#0a0a0a] rounded-3xl border border-white/10 shadow-2xl p-8 sm:p-12 lg:p-16">
-              
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 sm:gap-x-10">
-                
                 <div className="text-center">
                   <h3 className="text-4xl sm:text-5xl font-serif text-white mb-2 whitespace-nowrap">₹500<span className="text-[#C5A059] text-3xl sm:text-4xl">Cr+</span></h3>
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-zinc-400 font-semibold mt-2">Assets Managed</p>
                 </div>
-
                 <div className="text-center">
                   <h3 className="text-4xl sm:text-5xl font-serif text-white mb-2 whitespace-nowrap">1,200<span className="text-[#C5A059] text-3xl sm:text-4xl">+</span></h3>
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-zinc-400 font-semibold mt-2">Families Advised</p>
                 </div>
-
                 <div className="text-center">
                   <h3 className="text-4xl sm:text-5xl font-serif text-white mb-2 whitespace-nowrap">10<span className="text-[#C5A059] text-3xl sm:text-4xl">+</span></h3>
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-zinc-400 font-semibold mt-2">Years of Trust</p>
                 </div>
-
                 <div className="text-center">
                   <h3 className="text-4xl sm:text-5xl font-serif text-white mb-2 whitespace-nowrap">40<span className="text-[#C5A059] text-3xl sm:text-4xl">+</span></h3>
                   <p className="text-xs sm:text-sm uppercase tracking-widest text-zinc-400 font-semibold mt-2">Premium Projects</p>
                 </div>
-
               </div>
-
             </div>
           </Container>
         </section>
