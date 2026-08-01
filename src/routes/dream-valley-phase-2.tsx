@@ -169,4 +169,5 @@ function DreamValleyDetailPage() {
       <Footer columns={FOOTER_COLUMNS} phone={SITE.phone} email={SITE.email} address={SITE.address} socials={[]} />
     </div>
   );
-}
+}    
+

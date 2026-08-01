@@ -91,7 +91,7 @@ function AboutPage() {
                         </span>
                       </div>
                       <h4 className="text-white font-serif text-2xl font-bold tracking-wide mb-1">Amit Singh</h4>
-                      <p className="text-accent text-xs uppercase tracking-widest font-semibold">Co-Founder & Managing Partner</p>
+                      <p className="text-accent text-xs uppercase tracking-widest font-semibold">Founder & Managing Partner</p>
                     </div>
                   </div>
 

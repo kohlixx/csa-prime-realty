@@ -199,3 +199,14 @@ export const INSIGHTS: BlogCardData[] = [
   { slug: "guide-to-rera-verification", title: "The Buyer's Guide to RERA Verification", excerpt: "A step-by-step walkthrough of what to verify before signing — from title deeds to encumbrance certificates.", cover: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1000&q=80", category: "Guide", readingTime: "12 min read", publishedAt: "2026-06-28", author: { name: "Legal Desk", avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Legal" } },
   { slug: "yamuna-expressway-investment", title: "Why the Yamuna Expressway is 2026's Best Bet", excerpt: "With the Jewar Airport opening in phases, corridor land values are re-rating. Where to enter and at what ticket.", cover: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1000&q=80", category: "Investment", readingTime: "6 min read", publishedAt: "2026-06-14", author: { name: "Investment Desk", avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Invest" } },
 ];
+export const SITE = {
+  name: "CSA Prime Realty",
+  phone: "+91 98765 43210", // Apna phone number yahan daalein
+  email: "advisory@csaprimerealty.com",
+  address: "Noida & Yamuna Expressway, NCR, India",
+  socials: {
+    instagram: "https://instagram.com/csaprimerealty",
+    facebook: "https://facebook.com/csaprimerealty",
+    linkedin: "https://linkedin.com/company/csaprimerealty", // (Aapka 'inded' matlab LinkedIn ho sakta hai, URL yahan update kar dein)
+  },
+};
