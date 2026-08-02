@@ -130,10 +130,10 @@ function BrandMark() {
   return (
     <div className="flex items-center py-1">
       <img 
-        src="/logo.png" 
-        alt="CSA Prime Realty" 
-        className="h-16 md:h-24 w-auto max-w-none object-contain scale-125 origin-left transition-transform duration-300 hover:scale-135" 
-      />
+  src="/favicon.jpg" 
+  alt="CSA Prime Realty" 
+  className="h-10 md:h-12 w-auto object-contain rounded-md" 
+/>
     </div>
   );
 }

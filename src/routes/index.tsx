@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Search, ArrowRight, ShieldCheck, Sparkles, MapPin, Star, TrendingUp, Play, Building2, CheckCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Search, ArrowRight, ShieldCheck, MapPin, Play, CheckCircle } from "lucide-react";
 import {
   Navbar, Footer, Container, SectionHeader,
   FadeIn, SlideUp, Stagger, PropertyCard
@@ -15,17 +15,33 @@ function HomePage() {
   const [location, setLocation] = useState("Noida");
   const [propertyType, setPropertyType] = useState("apartment");
 
+  // ==========================================
+  // DYNAMIC FAVICON & TITLE SETUP
+  // ==========================================
+  useEffect(() => {
+    document.title = "CSA Prime Realty | Luxury Homes & Commercial Assets in NCR";
+    
+    let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+    link.href = '/favicon.jpg';
+    link.type = 'image/jpeg';
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col selection:bg-accent selection:text-black">
+    <div className="min-h-screen bg-background text-foreground flex flex-col selection:bg-accent selection:text-white">
       {/* ============ NAVBAR ============ */}
       <Navbar items={NAV_ITEMS} phone={SITE.phone} />
 
       <main className="flex-1">
 
-        {/* ============ FULL SEO OPTIMIZED HERO SECTION ============ */}
-        <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-32 pb-20 bg-zinc-950">
+        {/* ============ FULL SEO OPTIMIZED HERO SECTION (CINEMATIC) ============ */}
+        <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-32 pb-20 bg-black">
 
-          {/* Background YouTube Video */}
+          {/* Background YouTube Video - 100% ORIGINAL COLORS */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.777778vh] min-w-full min-h-full h-[56.25vw] pointer-events-none">
               <iframe
@@ -36,20 +52,20 @@ function HomePage() {
                 allow="autoplay; encrypted-media"
               ></iframe>
             </div>
-            {/* Perfect dark overlay so text is 100% readable */}
-            <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
+            {/* Soft dark transparent overlay so text is readable, but video colors POP */}
+            <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
           </div>
 
           <Container className="relative z-20 my-auto">
             <div className="max-w-4xl mx-auto text-center">
 
               <FadeIn>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-black/50 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent backdrop-blur-md mb-8 shadow-xl">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent backdrop-blur-md mb-8 shadow-sm">
                   <ShieldCheck className="size-4" /> Trusted RERA Channel Partner • Noida & NCR
                 </div>
               </FadeIn>
 
-              {/* SEO Optimized Main Heading */}
+              {/* SEO Optimized Main Heading (White Text for Contrast) */}
               <SlideUp delay={0.1}>
                 <h1 className="text-4xl sm:text-6xl xl:text-7xl font-serif text-white mb-6 tracking-tight leading-[1.1] drop-shadow-lg">
                   Extraordinary homes & properties in Noida, <br />
@@ -61,7 +77,7 @@ function HomePage() {
 
               {/* SEO Rich Subtitle */}
               <SlideUp delay={0.2}>
-                <p className="text-base sm:text-xl text-zinc-200 leading-relaxed font-light max-w-2xl mx-auto mb-10 drop-shadow-md">
+                <p className="text-base sm:text-xl text-zinc-100 leading-relaxed font-light max-w-2xl mx-auto mb-10 drop-shadow-md">
                   Experience a private, invitation-grade approach to acquiring ultra-luxury residences, sky villas, and high-yield commercial assets across Noida, Greater Noida, and NCR.
                 </p>
               </SlideUp>
@@ -71,22 +87,22 @@ function HomePage() {
                 <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
                   <Link
                     to="/buy"
-                    className="inline-flex items-center justify-center gap-3 bg-accent text-black font-bold text-sm px-8 py-4 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-2xl"
+                    className="inline-flex items-center justify-center gap-3 bg-accent text-black font-bold text-sm px-8 py-4 rounded-full hover:bg-white transition-all duration-300 shadow-xl"
                   >
                     Explore Portfolio <ArrowRight className="size-4" />
                   </Link>
                   <Link
                     to="/properties/dream-valley-phase-2"
-                    className="inline-flex items-center justify-center gap-3 bg-emerald-600/90 border border-emerald-400/40 text-white font-medium text-sm px-8 py-4 rounded-full backdrop-blur-md hover:bg-emerald-500 transition-all duration-300 shadow-2xl"
+                    className="inline-flex items-center justify-center gap-3 bg-black/50 border border-white/20 text-white font-medium text-sm px-8 py-4 rounded-full backdrop-blur-md hover:border-accent transition-all duration-300 shadow-lg"
                   >
-                    <Play className="size-3.5 fill-white" /> View Flagship Project
+                    <Play className="size-3.5 fill-white text-white" /> View Flagship Project
                   </Link>
                 </div>
               </SlideUp>
 
-              {/* Trust Metrics Bar */}
+              {/* Trust Metrics Bar - Dark Glass Effect */}
               <SlideUp delay={0.4}>
-                <div className="grid grid-cols-3 gap-6 pt-6 pb-6 max-w-2xl mx-auto bg-black/50 backdrop-blur-xl px-6 rounded-3xl border border-white/20 shadow-2xl">
+                <div className="grid grid-cols-3 gap-6 pt-6 pb-6 max-w-2xl mx-auto bg-black/40 backdrop-blur-xl px-6 rounded-3xl border border-white/10 shadow-2xl">
                   <div>
                     <p className="text-2xl sm:text-3xl font-serif text-white font-bold">₹1,500 Cr+</p>
                     <p className="text-[11px] text-zinc-300 uppercase tracking-widest mt-1">Properties Sold</p>
@@ -106,18 +122,17 @@ function HomePage() {
           </Container>
         </section>
 
-        {/* ============ INTERACTIVE QUICK SEARCH BAR STRIP ============ */}
-        <section className="py-10 bg-zinc-950 border-y border-white/5 mb-12">
+        {/* ============ INTERACTIVE QUICK SEARCH BAR STRIP (WHITE & CREAM) ============ */}
+        <section className="py-10 bg-background border-y border-border mb-12">
           <Container>
-            <div className="max-w-4xl mx-auto bg-[#0a0a0a] rounded-3xl p-6 border border-white/10 shadow-2xl grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
+            <div className="max-w-4xl mx-auto bg-card rounded-3xl p-6 border border-border shadow-xl grid grid-cols-1 sm:grid-cols-3 gap-6 items-center relative z-20 -mt-20">
 
-              {/* Location Select Dropdown */}
               <div className="flex flex-col">
-                <label className="text-[10px] uppercase tracking-wider text-zinc-400 font-semibold mb-1">Select Location</label>
+                <label className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Select Location</label>
                 <select
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
-                  className="bg-zinc-900 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-accent cursor-pointer"
+                  className="bg-muted/50 border border-border rounded-xl px-3 py-2.5 text-sm text-foreground focus:outline-none focus:border-accent cursor-pointer"
                 >
                   <option value="Noida">Noida</option>
                   <option value="Greater Noida">Greater Noida</option>
@@ -126,13 +141,12 @@ function HomePage() {
                 </select>
               </div>
 
-              {/* Property Type Select Dropdown */}
               <div className="flex flex-col">
-                <label className="text-[10px] uppercase tracking-wider text-zinc-400 font-semibold mb-1">Property Type</label>
+                <label className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">Property Type</label>
                 <select
                   value={propertyType}
                   onChange={(e) => setPropertyType(e.target.value)}
-                  className="bg-zinc-900 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-accent cursor-pointer"
+                  className="bg-muted/50 border border-border rounded-xl px-3 py-2.5 text-sm text-foreground focus:outline-none focus:border-accent cursor-pointer"
                 >
                   <option value="apartment">Sky Villas & Apartments</option>
                   <option value="floor">Independent Floors</option>
@@ -141,12 +155,11 @@ function HomePage() {
                 </select>
               </div>
 
-              {/* Search Button */}
               <div className="flex items-end justify-center sm:justify-end pt-2 sm:pt-0">
                 <Link
                   to="/buy"
                   search={{ location: location, type: propertyType }}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-accent text-black font-bold px-6 py-3 rounded-xl hover:bg-white transition-all text-sm shadow-lg cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-accent text-white font-bold px-6 py-3 rounded-xl hover:bg-primary transition-all text-sm shadow-md cursor-pointer"
                 >
                   <Search className="size-4" /> Search Properties
                 </Link>
@@ -157,82 +170,73 @@ function HomePage() {
         </section>
 
         {/* ============ FEATURED DREAM VALLEY PHASE 2 BANNER CARD ============ */}
-        <section className="py-12 bg-zinc-950/40">
+        <section className="py-12 bg-background">
           <Container>
-            <div className="max-w-5xl mx-auto bg-gradient-to-br from-zinc-900 via-zinc-950 to-black rounded-[2.5rem] border border-accent/30 p-8 md:p-12 shadow-2xl relative overflow-hidden group">
-
-              {/* Background glow effect */}
-              <div className="absolute -right-20 -top-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/20 transition-all duration-700"></div>
+            <div className="max-w-5xl mx-auto bg-card rounded-[2.5rem] border border-border p-8 md:p-12 shadow-luxury-xl relative overflow-hidden group">
+              <div className="absolute -right-20 -top-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/10 transition-all duration-700"></div>
 
               <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
-
-                {/* Left Image Thumbnail */}
-                <div className="relative h-72 md:h-80 rounded-3xl overflow-hidden border border-white/10 shadow-xl">
+                <div className="relative h-72 md:h-80 rounded-3xl overflow-hidden border border-border shadow-md">
                   <img
                     src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1000"
                     alt="Dream Valley Phase 2"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
-                    <span className="text-xs uppercase tracking-widest bg-accent text-black font-bold px-3 py-1 rounded-full">
+                    <span className="text-xs uppercase tracking-widest bg-accent text-white font-bold px-3 py-1 rounded-full">
                       Supreme Court Monitored
                     </span>
-                    <span className="text-xs font-medium text-zinc-300">50 Acres Township</span>
+                    <span className="text-xs font-medium text-white shadow-sm">50 Acres Township</span>
                   </div>
                 </div>
 
-                {/* Right Details */}
                 <div className="space-y-6">
                   <div>
                     <div className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-2">
                       <ShieldCheck className="size-4" /> Executed Through NBCC (India) Ltd
                     </div>
-                    <h2 className="text-3xl sm:text-4xl font-serif text-white font-bold">Dream Valley Phase 2</h2>
-                    <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
+                    <h2 className="text-3xl sm:text-4xl font-serif text-primary font-bold">Dream Valley Phase 2</h2>
+                    <p className="text-secondary text-sm mt-2 leading-relaxed">
                       Techzone IV, Greater Noida West. Ultra-modern residential township offering 1, 2 & 3 BHK luxury apartments with world-class amenities and green landscapes.
                     </p>
                   </div>
 
-                  {/* Highlights Grid */}
-                  <div className="grid grid-cols-2 gap-4 pt-2 border-t border-white/10">
-                    <div className="flex items-center gap-2 text-xs text-zinc-300">
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
+                    <div className="flex items-center gap-2 text-xs text-foreground font-medium">
                       <CheckCircle className="size-4 text-accent flex-shrink-0" />
                       <span>Size: 585 - 1,715 sq.ft.</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-zinc-300">
+                    <div className="flex items-center gap-2 text-xs text-foreground font-medium">
                       <CheckCircle className="size-4 text-accent flex-shrink-0" />
                       <span>Vaastu Compliant</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-zinc-300">
+                    <div className="flex items-center gap-2 text-xs text-foreground font-medium">
                       <CheckCircle className="size-4 text-accent flex-shrink-0" />
                       <span>Clubhouse & Pool</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-zinc-300">
+                    <div className="flex items-center gap-2 text-xs text-foreground font-medium">
                       <CheckCircle className="size-4 text-accent flex-shrink-0" />
                       <span>Near Yatharth Hospital</span>
                     </div>
                   </div>
 
-                  {/* Action Button - Fully Linked */}
-                  <div className="pt-2">
+                  <div className="pt-4">
                     <Link
-                      to="/dream-valley-phase-2"
-                      className="inline-flex items-center justify-center gap-3 bg-accent text-black font-bold px-8 py-3.5 rounded-full hover:bg-white transition-all duration-300 text-sm shadow-xl cursor-pointer"
+                      to="/properties/dream-valley-phase-2"
+                      className="inline-flex items-center justify-center gap-3 bg-primary text-white font-bold px-8 py-3.5 rounded-full hover:bg-accent transition-all duration-300 text-sm shadow-md cursor-pointer"
                     >
                       View Complete Project Details <ArrowRight className="size-4" />
                     </Link>
                   </div>
-
                 </div>
-
               </div>
             </div>
           </Container>
         </section>
 
         {/* ============ FEATURED PROPERTIES ============ */}
-        <section className="py-10">
+        <section className="py-16">
           <Container>
             <SectionHeader
               align="left"
@@ -250,7 +254,7 @@ function HomePage() {
             <div className="text-center mt-12">
               <Link
                 to="/buy"
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-foreground hover:text-accent transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-primary hover:text-accent transition-colors"
               >
                 View All Properties <ArrowRight className="size-4" />
               </Link>
@@ -259,28 +263,28 @@ function HomePage() {
         </section>
 
         {/* ============ TOP MICRO-MARKETS ============ */}
-        <section className="py-20 mt-16 bg-zinc-950/50 border-t border-white/5">
+        <section className="py-20 bg-muted/30 border-t border-border">
           <Container>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-3 block">Prime Locations</span>
-              <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Invest in NCR's Best Corridors</h2>
-              <p className="text-zinc-400 font-light">High-growth micro-markets offering unmatched rental yields and capital appreciation.</p>
+              <h2 className="text-3xl md:text-5xl font-serif text-primary mb-4">Invest in NCR's Best Corridors</h2>
+              <p className="text-secondary font-light">High-growth micro-markets offering unmatched rental yields and capital appreciation.</p>
             </div>
 
             <Stagger className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {TOP_LOCATIONS.map((loc, idx) => (
-                <div key={idx} className="group relative h-64 md:h-80 rounded-[2rem] overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div key={idx} className="group relative h-64 md:h-80 rounded-[2rem] overflow-hidden border border-border cursor-pointer shadow-md hover:shadow-xl transition-all duration-500">
                   <img
                     src={loc.image}
                     alt={loc.name}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
                   <div className="absolute bottom-0 left-0 w-full p-6 text-white">
                     <div className="flex items-center gap-2 mb-1">
                       <MapPin className="size-3.5 text-accent" />
-                      <span className="text-xs uppercase tracking-widest text-zinc-300">{loc.city}</span>
+                      <span className="text-xs uppercase tracking-widest text-white/80">{loc.city}</span>
                     </div>
                     <h3 className="text-2xl font-serif mb-1 group-hover:text-accent transition-colors">{loc.name}</h3>
                     <p className="text-accent text-xs font-bold tracking-wider">{loc.priceRange}</p>

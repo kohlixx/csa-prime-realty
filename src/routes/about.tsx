@@ -81,7 +81,7 @@ function AboutPage() {
                     <div>
                       <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 bg-zinc-900 mb-6 relative">
                         <img
-                          src="/PHOTO-2026-07-30-13-37-44.jpg"
+                          src="/amit.jpg"
                           alt="Amit Singh"
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out"
                         />
@@ -100,8 +100,8 @@ function AboutPage() {
                     <div>
                       <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 bg-zinc-900 mb-6 relative">
                         <img
-                          src="/PHOTO-2.jpg"
-                          alt="Ajeet Singh"
+                          src="/ajit.jpg"
+                          alt="Ajit Singh"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -200,3 +200,4 @@ function AboutPage() {
     </div>
   );
 }
+

@@ -3,6 +3,7 @@ import { Navbar, Footer, Container } from "@/components/design-system";
 import { NAV_ITEMS, SITE, FOOTER_COLUMNS } from "@/lib/site-data";
 import { ShieldCheck, MapPin, Phone, CheckCircle } from "lucide-react";
 
+// Yahan path "/properties/dream-valley-phase-2" kar diya gaya hai
 export const Route = createFileRoute("/dream-valley-phase-2")({
   component: DreamValleyDetailPage,
   head: () => ({
@@ -34,14 +35,14 @@ function DreamValleyDetailPage() {
 
             <div className="relative z-10 max-w-3xl text-white">
               <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-black/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent backdrop-blur-md mb-6 shadow-lg">
-                <ShieldCheck className="size-4" /> Supreme Court Monitored Project • Executed Through NBCC (India) Ltd[cite: 1, 2]
+                <ShieldCheck className="size-4" /> Supreme Court Monitored Project • Executed Through NBCC (India) Ltd
               </div>
               
               <h1 className="text-4xl sm:text-6xl font-serif font-bold mb-4 tracking-tight">
                 Dream Valley Phase 2 – Luxury Apartments in Greater Noida West
               </h1>
               <p className="text-zinc-300 text-base sm:text-xl font-light mb-8 leading-relaxed">
-                Plot No. GH-09, Sector - Techzone IV, Greater Noida West[cite: 1, 2] • 1, 2 & 3 BHK Luxury Residences (585 - 1,715 sq.ft.)[cite: 1, 2]
+                Plot No. GH-09, Sector - Techzone IV, Greater Noida West • 1, 2 & 3 BHK Luxury Residences (585 - 1,715 sq.ft.)
               </p>
               
               <div className="flex flex-wrap items-center gap-4">
@@ -67,24 +68,24 @@ function DreamValleyDetailPage() {
               <div className="bg-card border border-border p-8 md:p-10 rounded-3xl shadow-luxury-sm">
                 <h2 className="text-2xl sm:text-3xl font-serif mb-6 text-foreground">About Dream Valley Phase 2 Township</h2>
                 <p className="text-muted-foreground leading-relaxed font-light mb-6">
-                  An ultra-modern residential township located in Techzone IV, Greater Noida West[cite: 1, 2] and spread across a vast expanse of 50 acres within a 64-acre master development, covered with lush landscaped greens and replete with world-class amenities and high-tech features[cite: 1, 2]. Featuring Vaastu compliant spacious residences and state-of-the-art sports facilities[cite: 1, 2].
+                  An ultra-modern residential township located in Techzone IV, Greater Noida West and spread across a vast expanse of 50 acres within a 64-acre master development, covered with lush landscaped greens and replete with world-class amenities and high-tech features. Featuring Vaastu compliant spacious residences and state-of-the-art sports facilities.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-border">
                   <div>
                     <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-1">Project Area</span>
-                    <p className="text-lg font-serif font-bold text-foreground">50 Acres[cite: 1, 2]</p>
+                    <p className="text-lg font-serif font-bold text-foreground">50 Acres</p>
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-1">Unit Types</span>
-                    <p className="text-lg font-serif font-bold text-foreground">1, 2 & 3 BHK[cite: 1, 2]</p>
+                    <p className="text-lg font-serif font-bold text-foreground">1, 2 & 3 BHK</p>
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-1">Size Range</span>
-                    <p className="text-lg font-serif font-bold text-foreground">585 - 1,715 sq.ft.[cite: 1, 2]</p>
+                    <p className="text-lg font-serif font-bold text-foreground">585 - 1,715 sq.ft.</p>
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground uppercase tracking-wider block mb-1">Helpline</span>
-                    <p className="text-lg font-serif font-bold text-foreground">011-4084 8011[cite: 1, 2]</p>
+                    <p className="text-lg font-serif font-bold text-foreground">011-4084 8011</p>
                   </div>
                 </div>
               </div>
@@ -104,8 +105,8 @@ function DreamValleyDetailPage() {
                     { type: "3 BHK + 3T + Servant", size: "1,715 sq.ft." }
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center justify-between p-4 rounded-2xl bg-surface-muted border border-border">
-                      <span className="font-medium text-sm text-foreground">{item.type}[cite: 1, 2]</span>
-                      <span className="text-xs font-bold text-accent">{item.size}[cite: 1, 2]</span>
+                      <span className="font-medium text-sm text-foreground">{item.type}</span>
+                      <span className="text-xs font-bold text-accent">{item.size}</span>
                     </div>
                   ))}
                 </div>
@@ -115,15 +116,15 @@ function DreamValleyDetailPage() {
                 <h3 className="text-2xl font-serif mb-6 text-foreground">World-Class Amenities & Features</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {[
-                    "Clubhouse[cite: 1, 2]", "Gymnasium[cite: 1, 2]", "Swimming Pool[cite: 1, 2]", 
-                    "Badminton Court[cite: 1, 2]", "Basketball Court[cite: 1, 2]", "Lawn Tennis Court[cite: 1, 2]", 
-                    "Community Hall[cite: 1, 2]", "Garbage Disposal[cite: 1, 2]", "Amphitheatre[cite: 1, 2]",
-                    "Healthcare & Nursing Home[cite: 1, 2]", "Meditation Centre[cite: 1, 2]", "Kids Zone[cite: 1, 2]",
-                    "Leisure Area[cite: 1, 2]", "Milk & Egg Booth[cite: 1, 2]"
+                    "Clubhouse", "Gymnasium", "Swimming Pool", 
+                    "Badminton Court", "Basketball Court", "Lawn Tennis Court", 
+                    "Community Hall", "Garbage Disposal", "Amphitheatre",
+                    "Healthcare & Nursing Home", "Meditation Centre", "Kids Zone",
+                    "Leisure Area", "Milk & Egg Booth"
                   ].map((amenity, idx) => (
                     <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-surface-muted border border-border/50 text-sm text-muted-foreground">
                       <CheckCircle className="size-4 text-accent flex-shrink-0" />
-                      <span>{amenity}[cite: 1, 2]</span>
+                      <span>{amenity}</span>
                     </div>
                   ))}
                 </div>
@@ -138,7 +139,7 @@ function DreamValleyDetailPage() {
                 <div className="text-center pb-6 border-b border-border">
                   <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1">Direct Deal</span>
                   <h3 className="text-2xl font-serif text-foreground">Dream Valley Phase 2</h3>
-                  <p className="text-xs text-muted-foreground mt-1">Supreme Court Monitored Project[cite: 1, 2]</p>
+                  <p className="text-xs text-muted-foreground mt-1">Supreme Court Monitored Project</p>
                 </div>
 
                 <div className="space-y-4 pt-2">
@@ -169,5 +170,4 @@ function DreamValleyDetailPage() {
       <Footer columns={FOOTER_COLUMNS} phone={SITE.phone} email={SITE.email} address={SITE.address} socials={[]} />
     </div>
   );
-}    
-
+}

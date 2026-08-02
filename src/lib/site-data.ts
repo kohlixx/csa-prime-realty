@@ -73,20 +73,22 @@ export const HERO_STATS = [
 ];
 
 export const FEATURED_PROPERTIES: PropertyCardData[] = [
+  // YEH NAYI PROPERTY ADD KAREIN
   {
-    slug: "the-arbour-noida-150",
-    title: "The Arbour by ATS",
-    price: "₹3.85 Cr",
-    pricePerSqft: "₹14,200/sq.ft",
-    configuration: "4 BHK · Duplex",
-    bedrooms: 4, bathrooms: 4,
-    area: "2,710 sq.ft",
-    location: "Sector 150, Noida",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    photoCount: 24,
-    badges: [{ label: "New Launch", tone: "accent" }, { label: "RERA Approved", tone: "success" }],
-    developer: "ATS Homekraft",
-    possession: "Dec 2027",
+    slug: "dream-valley-phase-2",
+    title: "Dream Valley Phase 2",
+    price: "₹85 Lakhs*",
+    pricePerSqft: "Premium",
+    configuration: "1, 2 & 3 BHK",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "585 - 1,715 sq.ft",
+    location: "Techzone IV, Greater Noida West",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1000",
+    photoCount: 10,
+    badges: [{ label: "NBCC Monitored", tone: "accent" }, { label: "Hot", tone: "warning" }],
+    developer: "Amrapali / NBCC",
+    possession: "Under Construction",
   },
   {
     slug: "godrej-tropical-isle",

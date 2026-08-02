@@ -1,13 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/properties")({
-    component: PropertiesPage,
+  component: PropertiesLayout,
 });
 
-function PropertiesPage() {
-    return (
-        <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
-            <h1 className="text-4xl font-serif text-accent">Our Properties Portfolio</h1>
-        </div>
-    );
+function PropertiesLayout() {
+  // Outlet ka matlab hai ki ab iske andar ke routes (jaise $propertySlug.tsx) properly render honge
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Outlet />
+    </div>
+  );
 }

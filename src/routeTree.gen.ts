@@ -20,6 +20,7 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PropertiesRouteImport } from './routes/properties'
 import { Route as RentRouteImport } from './routes/rent'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
+import { Route as PropertiesPropertySlugRouteImport } from './routes/properties/$propertySlug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +77,11 @@ const AdminLeadsRoute = AdminLeadsRouteImport.update({
   path: '/admin/leads',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PropertiesPropertySlugRoute = PropertiesPropertySlugRouteImport.update({
+  id: '/$propertySlug',
+  path: '/$propertySlug',
+  getParentRoute: () => PropertiesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -86,9 +92,10 @@ export interface FileRoutesByFullPath {
   '/insights': typeof InsightsRoute
   '/new-launches': typeof NewLaunchesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/properties': typeof PropertiesRoute
+  '/properties': typeof PropertiesRouteWithChildren
   '/rent': typeof RentRoute
   '/admin/leads': typeof AdminLeadsRoute
+  '/properties/$propertySlug': typeof PropertiesPropertySlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -99,9 +106,10 @@ export interface FileRoutesByTo {
   '/insights': typeof InsightsRoute
   '/new-launches': typeof NewLaunchesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/properties': typeof PropertiesRoute
+  '/properties': typeof PropertiesRouteWithChildren
   '/rent': typeof RentRoute
   '/admin/leads': typeof AdminLeadsRoute
+  '/properties/$propertySlug': typeof PropertiesPropertySlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -113,9 +121,10 @@ export interface FileRoutesById {
   '/insights': typeof InsightsRoute
   '/new-launches': typeof NewLaunchesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
-  '/properties': typeof PropertiesRoute
+  '/properties': typeof PropertiesRouteWithChildren
   '/rent': typeof RentRoute
   '/admin/leads': typeof AdminLeadsRoute
+  '/properties/$propertySlug': typeof PropertiesPropertySlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +140,7 @@ export interface FileRouteTypes {
     | '/properties'
     | '/rent'
     | '/admin/leads'
+    | '/properties/$propertySlug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +154,7 @@ export interface FileRouteTypes {
     | '/properties'
     | '/rent'
     | '/admin/leads'
+    | '/properties/$propertySlug'
   id:
     | '__root__'
     | '/'
@@ -157,6 +168,7 @@ export interface FileRouteTypes {
     | '/properties'
     | '/rent'
     | '/admin/leads'
+    | '/properties/$propertySlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -168,7 +180,7 @@ export interface RootRouteChildren {
   InsightsRoute: typeof InsightsRoute
   NewLaunchesRoute: typeof NewLaunchesRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
-  PropertiesRoute: typeof PropertiesRoute
+  PropertiesRoute: typeof PropertiesRouteWithChildren
   RentRoute: typeof RentRoute
   AdminLeadsRoute: typeof AdminLeadsRoute
 }
@@ -252,8 +264,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLeadsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/properties/$propertySlug': {
+      id: '/properties/$propertySlug'
+      path: '/$propertySlug'
+      fullPath: '/properties/$propertySlug'
+      preLoaderRoute: typeof PropertiesPropertySlugRouteImport
+      parentRoute: typeof PropertiesRoute
+    }
   }
 }
+
+interface PropertiesRouteChildren {
+  PropertiesPropertySlugRoute: typeof PropertiesPropertySlugRoute
+}
+
+const PropertiesRouteChildren: PropertiesRouteChildren = {
+  PropertiesPropertySlugRoute: PropertiesPropertySlugRoute,
+}
+
+const PropertiesRouteWithChildren = PropertiesRoute._addFileChildren(
+  PropertiesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -264,7 +295,7 @@ const rootRouteChildren: RootRouteChildren = {
   InsightsRoute: InsightsRoute,
   NewLaunchesRoute: NewLaunchesRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
-  PropertiesRoute: PropertiesRoute,
+  PropertiesRoute: PropertiesRouteWithChildren,
   RentRoute: RentRoute,
   AdminLeadsRoute: AdminLeadsRoute,
 }
