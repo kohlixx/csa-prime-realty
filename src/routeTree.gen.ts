@@ -21,6 +21,7 @@ import { Route as PropertiesRouteImport } from './routes/properties'
 import { Route as RentRouteImport } from './routes/rent'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as PropertiesPropertySlugRouteImport } from './routes/properties/$propertySlug'
+import { Route as PropertiesEterniaGreaterNoidaRouteImport } from './routes/properties/eternia-greater-noida'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -82,6 +83,12 @@ const PropertiesPropertySlugRoute = PropertiesPropertySlugRouteImport.update({
   path: '/$propertySlug',
   getParentRoute: () => PropertiesRoute,
 } as any)
+const PropertiesEterniaGreaterNoidaRoute =
+  PropertiesEterniaGreaterNoidaRouteImport.update({
+    id: '/eternia-greater-noida',
+    path: '/eternia-greater-noida',
+    getParentRoute: () => PropertiesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByFullPath {
   '/rent': typeof RentRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/properties/$propertySlug': typeof PropertiesPropertySlugRoute
+  '/properties/eternia-greater-noida': typeof PropertiesEterniaGreaterNoidaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +118,7 @@ export interface FileRoutesByTo {
   '/rent': typeof RentRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/properties/$propertySlug': typeof PropertiesPropertySlugRoute
+  '/properties/eternia-greater-noida': typeof PropertiesEterniaGreaterNoidaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +134,7 @@ export interface FileRoutesById {
   '/rent': typeof RentRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/properties/$propertySlug': typeof PropertiesPropertySlugRoute
+  '/properties/eternia-greater-noida': typeof PropertiesEterniaGreaterNoidaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/rent'
     | '/admin/leads'
     | '/properties/$propertySlug'
+    | '/properties/eternia-greater-noida'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/rent'
     | '/admin/leads'
     | '/properties/$propertySlug'
+    | '/properties/eternia-greater-noida'
   id:
     | '__root__'
     | '/'
@@ -169,6 +181,7 @@ export interface FileRouteTypes {
     | '/rent'
     | '/admin/leads'
     | '/properties/$propertySlug'
+    | '/properties/eternia-greater-noida'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -271,15 +284,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PropertiesPropertySlugRouteImport
       parentRoute: typeof PropertiesRoute
     }
+    '/properties/eternia-greater-noida': {
+      id: '/properties/eternia-greater-noida'
+      path: '/eternia-greater-noida'
+      fullPath: '/properties/eternia-greater-noida'
+      preLoaderRoute: typeof PropertiesEterniaGreaterNoidaRouteImport
+      parentRoute: typeof PropertiesRoute
+    }
   }
 }
 
 interface PropertiesRouteChildren {
   PropertiesPropertySlugRoute: typeof PropertiesPropertySlugRoute
+  PropertiesEterniaGreaterNoidaRoute: typeof PropertiesEterniaGreaterNoidaRoute
 }
 
 const PropertiesRouteChildren: PropertiesRouteChildren = {
   PropertiesPropertySlugRoute: PropertiesPropertySlugRoute,
+  PropertiesEterniaGreaterNoidaRoute: PropertiesEterniaGreaterNoidaRoute,
 }
 
 const PropertiesRouteWithChildren = PropertiesRoute._addFileChildren(

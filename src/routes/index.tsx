@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Search, ArrowRight, ShieldCheck, MapPin, Play, CheckCircle } from "lucide-react";
+import { Search, ArrowRight, ShieldCheck, MapPin, Play, CheckCircle, Gift, Sparkles, Building2 } from "lucide-react";
 import {
   Navbar, Footer, Container, SectionHeader,
   FadeIn, SlideUp, Stagger, PropertyCard
@@ -60,8 +60,8 @@ function HomePage() {
             <div className="max-w-4xl mx-auto text-center">
 
               <FadeIn>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-5 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent backdrop-blur-md mb-8 shadow-sm">
-                  <ShieldCheck className="size-4" /> Trusted RERA Channel Partner • Noida & NCR
+                <div className="inline-flex items-center gap-2 rounded-full border border-yellow-500/50 bg-black/60 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-yellow-400 backdrop-blur-md mb-8 shadow-xl">
+                  <Gift className="size-4" /> Special Housefull Offer Active Now
                 </div>
               </FadeIn>
 
@@ -92,10 +92,10 @@ function HomePage() {
                     Explore Portfolio <ArrowRight className="size-4" />
                   </Link>
                   <Link
-                    to="/properties/dream-valley-phase-2"
-                    className="inline-flex items-center justify-center gap-3 bg-black/50 border border-white/20 text-white font-medium text-sm px-8 py-4 rounded-full backdrop-blur-md hover:border-accent transition-all duration-300 shadow-lg"
+                    to="/properties/eternia-greater-noida"
+                    className="inline-flex items-center justify-center gap-3 bg-black/60 border border-yellow-500/40 text-yellow-400 font-bold text-sm px-8 py-4 rounded-full backdrop-blur-md hover:bg-yellow-500 hover:text-black transition-all duration-300 shadow-lg"
                   >
-                    <Play className="size-3.5 fill-white text-white" /> View Flagship Project
+                    <Gift className="size-4" /> Claim Eternia Housefull Offer
                   </Link>
                 </div>
               </SlideUp>
@@ -169,8 +169,79 @@ function HomePage() {
           </Container>
         </section>
 
-        {/* ============ FEATURED DREAM VALLEY PHASE 2 BANNER CARD ============ */}
+        {/* ============ NEW ETERNIA HOUSEFULL OFFER BANNER ============ */}
         <section className="py-12 bg-background">
+          <Container>
+            <div className="max-w-5xl mx-auto bg-card rounded-[2.5rem] border-2 border-yellow-500/40 p-8 md:p-12 shadow-luxury-xl relative overflow-hidden group">
+              {/* Glow Effect */}
+              <div className="absolute -right-20 -top-20 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-yellow-500/20 transition-all duration-700"></div>
+
+              <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
+                {/* Image Thumbnail */}
+<div className="relative h-72 md:h-80 rounded-3xl overflow-hidden border border-border shadow-md">
+  <img
+    src="/eternia.jpg"
+    alt="Eternia Greater Noida West"
+    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
+    <span className="text-xs uppercase tracking-widest bg-yellow-500 text-black font-bold px-3 py-1 rounded-full flex items-center gap-1">
+      <Gift className="size-3" /> Housefull Offer
+    </span>
+    <span className="text-xs font-medium text-white shadow-sm">G+30 Towers</span>
+  </div>
+</div>
+                {/* Details */}
+                <div className="space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-widest mb-2">
+                      <ShieldCheck className="size-4" /> NBCC Monitored Project
+                    </div>
+                    <h2 className="text-3xl sm:text-4xl font-serif text-primary font-bold flex items-center gap-3">
+                      Eternia <Sparkles className="size-6 text-yellow-500" />
+                    </h2>
+                    <p className="text-secondary text-sm mt-2 leading-relaxed">
+                      Techzone IV, Greater Noida West. 3 & 4 BHK spacious residences featuring a magnificent 25,000 sq.ft. clubhouse.
+                    </p>
+                  </div>
+
+                  {/* Offer Highlights Grid */}
+                  <div className="bg-yellow-500/5 border border-yellow-500/20 p-4 rounded-2xl">
+                    <p className="text-sm font-bold text-yellow-700 mb-3">Fully Loaded Homes @ ₹9,400/sq.ft.*</p>
+                    <div className="grid grid-cols-2 gap-y-3 gap-x-2">
+                      <div className="flex items-start gap-2 text-xs text-foreground font-medium">
+                        <CheckCircle className="size-4 text-yellow-600 flex-shrink-0" /> ACs in All Rooms
+                      </div>
+                      <div className="flex items-start gap-2 text-xs text-foreground font-medium">
+                        <CheckCircle className="size-4 text-yellow-600 flex-shrink-0" /> Modular Kitchen
+                      </div>
+                      <div className="flex items-start gap-2 text-xs text-foreground font-medium">
+                        <CheckCircle className="size-4 text-yellow-600 flex-shrink-0" /> 55" LED TV
+                      </div>
+                      <div className="flex items-start gap-2 text-xs text-foreground font-medium">
+                        <CheckCircle className="size-4 text-yellow-600 flex-shrink-0" /> Wardrobes
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Button */}
+                  <div className="pt-2">
+                    <Link
+                      to="/properties/eternia-greater-noida"
+                      className="inline-flex items-center justify-center gap-3 bg-primary text-white font-bold px-8 py-3.5 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300 text-sm shadow-md cursor-pointer w-full sm:w-auto"
+                    >
+                      View Complete Offer Details <ArrowRight className="size-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ============ FEATURED DREAM VALLEY PHASE 2 BANNER CARD ============ */}
+        <section className="py-8 bg-background">
           <Container>
             <div className="max-w-5xl mx-auto bg-card rounded-[2.5rem] border border-border p-8 md:p-12 shadow-luxury-xl relative overflow-hidden group">
               <div className="absolute -right-20 -top-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/10 transition-all duration-700"></div>
