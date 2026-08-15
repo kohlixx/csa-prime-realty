@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CSA Prime Realty — Luxury Real Estate Advisory" },
-      { name: "description", content: "CSA Prime Realty is a private-office standard advisory firm for luxury real estate in Noida, Greater Noida, and Yamuna Expressway." },
-      { name: "author", content: "CSA Prime Realty" },
-      { property: "og:title", content: "CSA Prime Realty — Luxury Real Estate Advisory" },
-      { property: "og:description", content: "Curated luxury residences, sky villas, and commercial assets in NCR." },
+      { title: "Crown Estate Realty | Premium Luxury Homes in Noida & Greater Noida" },
+      { name: "description", content: "Explore curated 2, 3 & 4 BHK luxury apartments, villas, and commercial properties in Noida, Greater Noida West, & Yamuna Expressway with Crown Estate Realty. RERA verified." },
+      { name: "author", content: "Crown Estate Realty" },
+      { property: "og:title", content: "Crown Estate Realty | Premium Luxury Homes in Noida & Greater Noida" },
+      { property: "og:description", content: "Explore curated luxury residences, villas, and commercial assets in Noida, Greater Noida, and Yamuna Expressway with zero brokerage options." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@CSAPrimeRealty" },
+      { name: "twitter:site", content: "@CrownEstateRealty" },
     ],
     links: [
       {
@@ -123,7 +123,4 @@ function RootComponent() {
       <Outlet />
     </QueryClientProvider>
   );
-} 
-
-
-// 
+}

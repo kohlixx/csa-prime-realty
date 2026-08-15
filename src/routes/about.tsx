@@ -67,7 +67,7 @@ function AboutPage() {
           </div>
         </Container>
 
-        {/* ============ LEADERSHIP SECTION (AMIT SINGH & AJEET SINGH) ============ */}
+        {/* ============ LEADERSHIP SECTION (AMIT SINGH & AJIT SINGH) ============ */}
         <section className="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-white/[0.02] to-transparent border-y border-white/5">
           <Container>
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
@@ -95,7 +95,7 @@ function AboutPage() {
                     </div>
                   </div>
 
-                  {/* Ajeet Singh Card */}
+                  {/* Ajit Singh Card */}
                   <div className="group bg-zinc-900/80 p-6 rounded-3xl border border-white/10 hover:border-accent/40 transition-all duration-500 shadow-xl flex flex-col justify-between sm:mt-12">
                     <div>
                       <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-accent/20 bg-zinc-900 mb-6 relative">
@@ -132,7 +132,7 @@ function AboutPage() {
                   </p>
 
                   <div className="flex flex-col">
-                    <p className="text-3xl font-serif text-white tracking-wide mb-1">Amit Singh & Ajeet Singh</p>
+                    <p className="text-3xl font-serif text-white tracking-wide mb-1">Amit Singh & Ajit Singh</p>
                     <p className="text-accent uppercase tracking-[0.2em] text-[10px] font-bold">Leadership Board, Crown Estate Realty</p>
                   </div>
                 </div>

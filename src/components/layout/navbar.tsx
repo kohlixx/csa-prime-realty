@@ -50,7 +50,7 @@ export function Navbar({ brand, items, cta, phone, className }: NavbarProps) {
         <div className="flex h-16 items-center justify-between gap-6 lg:h-20">
           {/* Brand */}
           <div className="flex min-w-0 items-center gap-3">
-            <Link to="/" className="flex items-center gap-2.5" aria-label="CSA Prime Realty">
+            <Link to="/" className="flex items-center gap-2.5" aria-label="Crown Estate Realty">
               {brand ?? <BrandMark />}
             </Link>
           </div>
@@ -124,16 +124,16 @@ export function Navbar({ brand, items, cta, phone, className }: NavbarProps) {
 }
 
 // --------------------------------------------------------
-// YAHAN AAPKA NAYA LOGO LAGAYA GAYA HAI (Image Tag)
+// BRAND LOGO MARK
 // --------------------------------------------------------
 function BrandMark() {
   return (
     <div className="flex items-center py-1">
       <img 
-  src="/favicon.jpg" 
-  alt="CSA Prime Realty" 
-  className="h-10 md:h-12 w-auto object-contain rounded-md" 
-/>
+        src="/favicon.jpg" 
+        alt="Crown Estate Realty" 
+        className="h-10 md:h-12 w-auto object-contain rounded-md" 
+      />
     </div>
   );
 }

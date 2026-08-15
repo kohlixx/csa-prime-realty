@@ -18,7 +18,7 @@ export interface FloatingContactDockProps {
 export function FloatingContactDock({
   phone,
   whatsapp,
-  whatsappMessage = "Hi, I'm interested in a property listed on CSA Prime Realty.",
+  whatsappMessage = "Hi, I'm interested in a property listed on Crown Estate Realty.",
   className,
 }: FloatingContactDockProps) {
   const [showTop, setShowTop] = React.useState(false);
